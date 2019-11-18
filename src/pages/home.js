@@ -1,7 +1,9 @@
 
 function Home(props) {
   let template = ''
-  template = `<div class=movie></div>`
+  template = `<div class=movie></div>
+  <p class="map-title">Cinemas próximos</p>
+  <div style="width: 640px; height: 480px;" id="map"></div>`
 
   props.forEach(item => {
     fetch (movieUrl + item.id)
@@ -17,6 +19,8 @@ function Home(props) {
   })
   return template
 }
+
+
 
 
 export default Home;
