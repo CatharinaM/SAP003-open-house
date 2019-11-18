@@ -2,17 +2,14 @@
 
 *{
   margin: 0px;
-  /* display: block; */
-  color: white;
   box-sizing: border-box;
+  color: beige;
 }
 
 body {
   background-image: linear-gradient(#2F1551, #160032);
   background-attachment: fixed;
   padding: 50px 20px;
-    
-
 }
 .movietime {
   font-family: 'Raleway', sans-serif;
@@ -63,6 +60,90 @@ button.voltar {
   background-size: 18px;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.sale-card {
+    margin-bottom: 8px;
+    margin-left: 3%;
+    height: 118px;
+    width: 90%;
+    background: #2F1452;
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.16);
+    border-radius: 5px;
+    padding: 1%;
+}
+
+.price-btn {
+    display: flex;
+    margin-top: 5%;
+}
+
+.sale-btn {
+    display:inline-block;
+    background: #01C467;
+    height: 36px;
+    width: 118px;
+    margin-left: 12%;
+    margin-bottom: 3%;
+    border: none;
+    box-shadow: 0px 3px 0px #00532B;
+    border-radius: 2px;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+}
+
+.sale-btn:focus {
+    outline: none;
+}
+
+.cine {
+    font-family: Raleway;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 19px;
+    color: #FFC700;
+    margin-top: 3%;
+    margin-left: 2%;
+}
+
+.section {
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 14px;
+    color: #854CD1;
+    margin-top: 3%;
+    margin-left: 2%;
+}
+
+.price {
+    display: inline-block;
+    margin-left: 40%;
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: bold;
+    margin-top: 3%;
+    font-size: 24px;
+    line-height: 23px;
+    text-align: right;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+
+
+
+
+button.voltar {
+    border-radius: 5px;
+    margin: 6px;
+    display: flex;
 }
 
 .movietime {

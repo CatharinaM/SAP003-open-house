@@ -10,8 +10,6 @@ function Home(props) {
     .then(response => response.json())
     .then(data => {
       let movieName = data.results[0].title
-      
-      console.log(data.results[0].original_title);
       let moviePoster = data.results[0].poster_path
       
       document.querySelector('.movie').innerHTML += `<div class="poster"><a href='#${data.results[0].original_title}'><img class="poster-img" src='https://image.tmdb.org/t/p/w200${moviePoster}'><p>${movieName}</p></a></div>`
