@@ -1,4 +1,3 @@
-
 function Movie(props) {
   const date = new Date()
   const today = date.getDay()
@@ -8,7 +7,7 @@ function Movie(props) {
     <section class='theater'></section>
   `
   console.log(location.hash);
-  fetch (movieUrl+ location.hash.substring(1))
+  fetch(movieUrl + location.hash.substring(1))
     .then(response => response.json())
     .then(data => {
       let movieData = data.results[0];
@@ -34,7 +33,7 @@ function Movie(props) {
         })    
       })
     })
-    return template 
+  return template
 }
 
 
