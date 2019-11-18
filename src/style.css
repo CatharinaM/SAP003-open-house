@@ -1,17 +1,23 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 
 *{
-    margin: 0px;
-    /* display: block; */
-    color: white;
-    box-sizing: border-box;
+  margin: 0px;
+  /* display: block; */
+  color: white;
+  box-sizing: border-box;
 }
 
+body {
+  background-image: linear-gradient(#2F1551, #160032);
+  background-attachment: fixed;
+  padding: 50px 20px;
+    
+
+}
 .movietime {
   font-family: 'Raleway', sans-serif;
 }
 main{
-  margin-top: 55px;
   padding: 10px;
 }
 .movie{
@@ -36,44 +42,29 @@ main{
 }
 
 header {
-    position: fixed;
-    width: 100%;
-    height: 52px;
-    left: -1px;
-    top: 0px;
-    background: #181423;
-    opacity: 0.8;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: fixed;
+  width: 100%;
+  height: 52px;
+  left: -1px;
+  top: 0px;
+  background: #181423;
+  opacity: 0.8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #map{
   width: 100%;
 }
 
 button.voltar {
-    display: none;
+  background: rgb(199, 165, 255);
+  background-image: url(./images/like.svg);
+  background-size: 18px;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-/* @media (max-width: 700px) { */
-
-
-    body {
-        background-image: linear-gradient(#2F1551, #160032);
-        background-attachment: fixed;
-        padding: 50px 20px;
-        
-
-    }
-
-
-    button.voltar {
-       border-radius: 5px;
-       margin: 6px;
-       display: flex;
-  }
-
-    .movietime {
-        font-family: 'Raleway', sans-serif;
-
-    }
+.movietime {
+    font-family: 'Raleway', sans-serif;
+}
