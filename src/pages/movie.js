@@ -28,7 +28,7 @@ function Movie(props) {
           })
         })
         price.forEach(item => {
-          document.querySelector('.theater').innerHTML +=`<div><h2>${item[0]}</h2><p> ${item[1]}</p></div><div><p>${item[2]}</p><p>Botão Comprar</p></div>`
+          document.querySelector('.theater').innerHTML +=`<div class='list'><div><h2>${item[0]}</h2><p> ${item[1]}</p></div><div><p>${item[2]}</p><p>Botão Comprar</p></div></div>`
         })    
       })
     })
