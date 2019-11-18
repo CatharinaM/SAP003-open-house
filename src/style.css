@@ -27,6 +27,10 @@ header {
     justify-content: center;
 }
 
+button.voltar {
+    display: none;
+}
+
 @media (max-width: 700px) {
 
     * {
@@ -37,10 +41,19 @@ header {
     body {
         background-image: linear-gradient(#2F1551, #160032);
         background-attachment: fixed;
+        padding: 50px 20px;
         
+
     }
+
+
+    button.voltar {
+       border-radius: 5px;
+       margin: 6px;
+       display: flex;
+  }
 
     .movietime {
         font-family: 'Raleway', sans-serif;
+
     }
-}
