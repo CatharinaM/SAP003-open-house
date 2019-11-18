@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 7b7c379730bca28d9936a4ecaba9895e19c46018
 {
   "database": {
     "rules": "database.rules.json"
@@ -11,7 +7,7 @@
     "indexes": "firestore.indexes.json"
   },
   "hosting": {
-    "public": "public",
+    "public": "src",
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -24,13 +20,4 @@
       }
     ]
   }
-<<<<<<< HEAD
 }
-=======
-<<<<<<< HEAD
-{}
->>>>>>> 333e66f6679770424c8ba462621c8406af933f3a
-=======
-}
->>>>>>> f0593678facad2f612c9a0048e122ad9121e701c
->>>>>>> 7b7c379730bca28d9936a4ecaba9895e19c46018
