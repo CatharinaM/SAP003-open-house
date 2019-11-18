@@ -1,8 +1,11 @@
+import Button from '/components/button.js';
+
 
 function Movie(props) {
   const date = new Date()
   const today = date.getDay()
   let price = []
+
   let template = `
     <section class='movie'></section>
     <section class='theater'></section>
@@ -16,26 +19,39 @@ function Movie(props) {
         snap.forEach(hora => {      
           document.querySelector('.movie').innerHTML = `<img src='https://image.tmdb.org/t/p/w200${movieData.poster_path}'><div><p>${movieData.title}</p><p>${movieData.overview}</p></div>`
           props.forEach(item => {
-            if (item.id === movieData.title){
+            if (item.id === movieData.original_title){
               for (let key in item.data()){
                 if(key === hora.id){
                   let dado = item.data()[key]
                   let horario = hora.data()[today]
-                  price.push([key, dado, horario])
+                  let url = hora.data().site
+                  price.push([key, dado, horario, url])
                 };                
               }         
             }
           })
         })
-        price.forEach(item => {
-          document.querySelector('.theater').innerHTML +=`<div class='list'><div><h2>${item[0]}</h2><p> ${item[1]}</p></div><div><p>${item[2]}</p><p>Botão Comprar</p></div></div>`
+        price.forEach(item => { console.log('oi')
+          document.querySelector('.theater').innerHTML +=
+          `<div class="sale-card">
+            <div>
+              <h2 class="cine">${item[0]}</h2>
+              <p class="section"> ${item[1]}</p>
+            </div>
+            <div class="price-btn">
+              <p class="price">${item[2]}</p>
+              <a href="${item[3]}" target="_blank"><button class="sale-btn">COMPRAR</button></a>
+            </div>
+          </div>`
         })    
       })
     })
     return template 
 }
 
-
+function click() {
+  
+}
 
 export default Movie;
 
