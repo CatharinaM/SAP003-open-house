@@ -20,7 +20,9 @@ function Movie(props) {
             if (item.id === movieData.title){
               for (let key in item.data()){
                 if(key === hora.id){
-                  console.log('sim');
+                  let dado = item.data()[key]
+
+                  price.push({key, dado})
                   
                 };
                 
@@ -28,6 +30,8 @@ function Movie(props) {
             }
           })
         })
+        console.log(price);
+        
         
       })
       
