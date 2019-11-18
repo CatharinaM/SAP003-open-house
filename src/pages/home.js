@@ -1,5 +1,5 @@
 
-function Home(props){
+function Home(props) {
   let template = ''
   template = `<div class=movie></div>`
 
@@ -20,4 +20,3 @@ function Home(props){
 
 
 export default Home;
-

@@ -9,7 +9,7 @@ function Movie(props) {
     <section class='theater'></section>
   `
   console.log(location.hash);
-  fetch (movieUrl+ location.hash.substring(1))
+  fetch(movieUrl + location.hash.substring(1))
     .then(response => response.json())
     .then(data => {
       let movieData = data.results[0];
@@ -20,7 +20,7 @@ function Movie(props) {
           <img src='https://image.tmdb.org/t/p/w200${movieData.poster_path}'>
           <div><p>${movieData.title}</p><p>${movieData.overview}</p></div>`
           props.forEach(item => {
-            if (item.id === movieData.title){
+            if (item.id === movieData.original_title){
               for (let key in item.data()){
                 if(key === hora.id){
                   let dado = item.data()[key]
@@ -30,13 +30,15 @@ function Movie(props) {
               }         
             }
           })
-        })
+        })        
+        price.sort((a, b) => (a[2] > b[2]?1:-1))
+
         price.forEach(item => {
           document.querySelector('.theater').innerHTML +=`<div class='list'><div><h2>${item[0]}</h2><p> ${item[1]}</p></div><div><p>${item[2]}</p><p>Botão Comprar</p></div></div>`
         })    
       })
     })
-    return template 
+  return template
 }
 
 function backToHome () {
