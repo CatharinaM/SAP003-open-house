@@ -3,7 +3,9 @@ function Home(props) {
   let template = ''
   template = `
     <h3>Filmes em cartaz essa semana</h3>
-    <section class=movie></section>`
+    <section class=movie></section>
+    <p class="map-title">Cinemas próximos</p>
+  <div style="width: 640px; height: 480px;" id="map"></div>`
 
   props.forEach(item => {
     fetch (movieUrl + item.id)
@@ -17,6 +19,8 @@ function Home(props) {
   })
   return template
 }
+
+
 
 
 export default Home;

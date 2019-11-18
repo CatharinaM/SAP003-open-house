@@ -11,30 +11,36 @@ body {
   background-attachment: fixed;
   padding: 50px 20px;
 }
+
 .movietime {
   font-family: 'Raleway', sans-serif;
 }
+
 main{
   padding: 10px;
 }
+
 .movie{
   display: flex;
   flex-wrap: wrap;
 }
+
 .poster{
   width: 50%;
   text-align: center;
   padding: 10px;
 }
+
 .poster>a{
   text-decoration: none;
 }
+
 .poster-img{
   border-radius: 10px;
   max-width: 100%;
   height: auto;
-
 }
+
 .list{
   display: flex;
   justify-content: space-around;
@@ -52,6 +58,7 @@ header {
   align-items: center;
   justify-content: center;
 }
+
 #map{
   width: 100%;
 }
@@ -137,15 +144,8 @@ button.voltar {
     color: #FFFFFF;
 }
 
-
-
-
 button.voltar {
     border-radius: 5px;
     margin: 6px;
     display: flex;
-}
-
-.movietime {
-    font-family: 'Raleway', sans-serif;
 }
