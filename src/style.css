@@ -29,8 +29,10 @@ main{
 .poster>a{
   text-decoration: none;
 }
-.poster .poster-img{
+.poster-img{
   border-radius: 10px;
+  max-width: 100%;
+  height: auto;
 
 }
 .list{
@@ -64,9 +66,7 @@ button.voltar {
 
 .sale-card {
     margin-bottom: 8px;
-    margin-left: 3%;
     height: 118px;
-    width: 90%;
     background: #2F1452;
     box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.16);
     border-radius: 5px;
@@ -75,7 +75,9 @@ button.voltar {
 
 .price-btn {
     display: flex;
-    margin-top: 5%;
+    justify-content: flex-end;
+    padding: 10px;
+    align-items: center;
 }
 
 .sale-btn {
@@ -83,7 +85,6 @@ button.voltar {
     background: #01C467;
     height: 36px;
     width: 118px;
-    margin-left: 12%;
     margin-bottom: 3%;
     border: none;
     box-shadow: 0px 3px 0px #00532B;
@@ -125,12 +126,11 @@ button.voltar {
 
 .price {
     display: inline-block;
-    margin-left: 40%;
     font-family: Helvetica;
     font-style: normal;
     font-weight: bold;
-    margin-top: 3%;
-    font-size: 24px;
+    margin-right: 10px;
+    font-size: 1.2em;
     line-height: 23px;
     text-align: right;
     letter-spacing: 0.02em;

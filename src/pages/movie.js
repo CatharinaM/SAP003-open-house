@@ -6,7 +6,7 @@ function Movie(props) {
   let price = []
 
   let template = `
-  ${Button({id: 'voltar', title: '', class: 'voltar', onClick: backToHome})}
+  ${Button({id: 'voltar', title: 'voltar', class: 'voltar', onClick: backToHome})}
   <section class='movie'></section>
     <section class='theater'></section>
   `
