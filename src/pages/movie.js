@@ -5,7 +5,7 @@ function Movie(props) {
     <div class='theater'></div>
   `
   console.log(location.hash);
-  fetch ('https://api.themoviedb.org/3/search/movie?api_key=16ea9e0790a6d24b043d3e19ebfc181f&language=pt-BR&query='+ location.hash.substring(1))
+  fetch (movieUrl+ location.hash.substring(1))
     .then(response => response.json())
     .then(data => {
       let movieData = data.results[0]
