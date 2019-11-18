@@ -4,7 +4,7 @@ function Home(props) {
   template = `<div class=movie></div>`
 
   props.forEach(item => {
-    fetch ('https://api.themoviedb.org/3/search/movie?api_key=16ea9e0790a6d24b043d3e19ebfc181f&language=pt-BR&year=2019&query='+ item.id)
+    fetch (movieUrl + item.id)
     .then(response => response.json())
     .then(data => {
       let movieName = data.results[0].title
