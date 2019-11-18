@@ -10,3 +10,5 @@
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
+
+  const movieUrl = 'https://api.themoviedb.org/3/search/movie?api_key=16ea9e0790a6d24b043d3e19ebfc181f&language=pt-BR&query='
