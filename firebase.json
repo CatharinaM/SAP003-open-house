@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "database": {
     "rules": "database.rules.json"
@@ -21,3 +22,6 @@
     ]
   }
 }
+=======
+{}
+>>>>>>> 333e66f6679770424c8ba462621c8406af933f3a
