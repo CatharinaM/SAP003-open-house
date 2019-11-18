@@ -1,6 +1,34 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+*{
+    margin: 0px;
+    display: block;
+}
+
+.movietime {
+    font-family: 'Raleway', sans-serif;
+}
+
 .list{
   display: flex;
   justify-content: space-around;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 52px;
+    left: -1px;
+    top: 0px;
+    background: #181423;
+    opacity: 0.8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button.voltar {
+    display: none;
 }
 
 @media (max-width: 700px) {
@@ -14,7 +42,9 @@
     body {
         background-image: linear-gradient(#2F1551, #160032);
         background-attachment: fixed;
+        padding: 50px 20px;
         
+
     }
     .sale-card {
         margin-bottom: 8px;
@@ -93,4 +123,14 @@
 
 
 
+
+    button.voltar {
+       border-radius: 5px;
+       margin: 6px;
+       display: flex;
+  }
+
+    .movietime {
+        font-family: 'Raleway', sans-serif;
+    }
 }
