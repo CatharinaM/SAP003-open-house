@@ -1,5 +1,3 @@
-import Button from '../components/button.js';
-
 function movieRender(movieData) {
   document.querySelector('.movie').innerHTML = `
             <img src='https://image.tmdb.org/t/p/w200${movieData.poster_path}'>
@@ -28,10 +26,12 @@ function Movie(props) {
     <section class='movie'></section>
     <section class='theater'></section>`;
 
+
   fetch(movieUrl + location.hash.substring(1))
     .then(response => response.json())
-    .then(data => {
+    .then(data => { console.log(data);
       let movieData = data.results[0];
+
 
       movieRender(movieData);
       firebase.firestore()
@@ -66,6 +66,7 @@ function Movie(props) {
             document.querySelector('.theater').innerHTML +=
               `<div class="sale-card">
               <div>
+
               <h2 class="cine">${item.key}</h2>
               <p class="section"> ${item.horario}</p>
               </div>
@@ -80,9 +81,5 @@ function Movie(props) {
   return template;
 }
 
-
-function backToHome() {
-  window.location.hash = '#home';
-}
 
 export default Movie;

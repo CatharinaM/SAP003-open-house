@@ -3,13 +3,10 @@
 *{
   margin: 0px;
   box-sizing: border-box;
-  color: beige;
-  font-family: 'Raleway', sans-serif;
 }
 
 body {
   background-image: linear-gradient(#2F1551, #160032);
-  background-attachment: fixed;
   padding: 50px 20px;
 }
 
@@ -139,7 +136,10 @@ input:checked + .slide-container .nav label { display: block; }
 
 .list{
   display: flex;
-  justify-content: space-around;
+}
+
+.nav-bar {
+  display: flex;
 }
 
 .nav-bar {
@@ -178,21 +178,41 @@ button.voltar {
 .movie-info{
   display: flex;
   justify-content: space-around;
-  /* max-height: 250px; */
   margin-bottom: 15px;
 }
 
 .movie-info>img{
+  min-width: 50%;
+  height: 240px;
+  width: auto;
   min-width: 53%;
   height: auto;
-  /* max-height: 100%; */
   align-self: flex-start;
-  flex-grow: 3;
   border-radius: 10px;
   margin: 0 15px 0 0;
   align-self: center;
   
 }
+.movie-data>h2 {
+  font-family: Raleway;
+  margin-left: 3%;
+  margin-top: 2%;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 22px;
+  color: #FFFFFF;
+}
+
+
+.movie-data>p{
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  color: #FFFFFF;
+  height: 232px;
 
 .movie-data{
   font-size: 0.7em;
@@ -213,7 +233,13 @@ p#movie-title.movie-data {
     font-weight: bolder;
     font-size: 19px;
     line-height: 22px;
+
 }
+.movie-data>p{
+  max-height: 250px;
+  overflow: auto;
+}
+
 
 
 .sale-card {
@@ -259,23 +285,19 @@ p#movie-title.movie-data {
     font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-weight: normal;
-    /* font-size: 24px; */
     line-height: 19px;
     color: #FFC700;
-    /* margin-top: 3%; */
-    /* margin-left: 2%; */
+
 }
 
 .section {
     font-family: Helvetica;
     font-style: normal;
     font-weight: normal;
-    /* font-size: 16px; */
     line-height: 14px;
     color: #854CD1;
     padding: 10px;
-    /* margin-top: 3%;
-    margin-left: 2%; */
+
 }
 
 .price {
