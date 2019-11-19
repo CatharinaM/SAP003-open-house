@@ -1,16 +1,16 @@
 import Button from '../components/button.js';
 
-function movieRender(movieData) {
-  document.querySelector('.movie').innerHTML = `
-            <img src='https://image.tmdb.org/t/p/w200${movieData.poster_path}'>
-            <div><p>${movieData.title}</p><p>${movieData.overview}</p></div>
-            <div>
-             <select id="day">
-              <option value="1">Segunda-feira (25/11)<option>
-              <option value="2">Terça-feira (26/11)<option>
-             </select>
-             <button>Filtrar</button>
-            </div>`;
+function movieRender(movieData, item) {
+  document.querySelector('.movie-info').innerHTML = `
+  <img class="movie-image" src='https://image.tmdb.org/t/p/w200${movieData.poster_path}'>
+  
+  <div class="movie-data">
+    <h2>${movieData.title}</h2>
+    <p>Diretor(a): ${item.data().diretor}</p>
+    <p>Elenco: ${item.data().elenco}</p>
+    <p>Duração: ${item.data().duracao}</p>
+    <p>Classificação: ${item.data().classificacao}</p>
+  </div>`;
 }
 
 function Movie(props) {
@@ -19,13 +19,14 @@ function Movie(props) {
   let price = [];
 
   const template = `
-    ${Button({
-    id: 'voltar',
-    title: 'voltar',
-    class: 'voltar',
-    onClick: backToHome,
-  })}
-    <section class='movie'></section>
+    <section class='movie-info'></section>
+    <div>
+      <select id="day">
+      <option value="1">Segunda-feira (25/11)<option>
+      <option value="2">Terça-feira (26/11)<option>
+      </select>
+      <button>Filtrar</button>
+    </div>
     <section class='theater'></section>`;
 
   fetch(movieUrl + location.hash.substring(1))
@@ -33,14 +34,15 @@ function Movie(props) {
     .then(data => {
       let movieData = data.results[0];
 
-      movieRender(movieData);
       firebase.firestore()
-        .collection('cinema')
-        .get()
-        .then((snap) => {
-          snap.forEach(hora => {
-            props.forEach(item => {
-              if (item.id === movieData.original_title) {
+      .collection('cinema')
+      .get()
+      .then((snap) => {
+        snap.forEach(hora => {
+          props.forEach(item => {
+            if (item.id === movieData.original_title) {
+              movieRender(movieData, item);
+              
                 for (let key in item.data()) {
                   if (key === hora.id) {
                     // console.log(item.data());
