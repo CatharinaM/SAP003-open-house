@@ -32,6 +32,15 @@ function Home(props) {
       'apikey': '4suKp7ALVGG_DeM2J0bKH5XgCuWGWOozj4Cw3z0rk_8'
     });
 
+    ui.getControl('zoom').setEnabled(false)
+    var mapSettings = ui.getControl('mapsettings');
+    var zoom = ui.getControl('zoom');
+    var scalebar = ui.getControl('scalebar');
+
+    mapSettings.setAlignment('top-left');
+    zoom.setAlignment('top-left');
+    scalebar.setAlignment('top-left');
+
     var defaultLayers = platform.createDefaultLayers();
 
     var map = new H.Map(
