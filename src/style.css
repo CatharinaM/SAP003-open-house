@@ -20,6 +20,8 @@ main{
 .carousel {
     margin-left: 15%;
     margin-right: 15%;
+    /* display: flex;
+    justify-content: center; */
 }
 
 ul.slides {
