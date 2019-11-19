@@ -70,3 +70,21 @@ Com base nesse problema, criamos as seguintes personas:
 *Necessidade*
 - Saber quais os ingressos mais baratos do dia.
 
+As três personas criadas nos levaram a três histórias de usuário:
+
+- História 1: *"Eu, como usuária, gostaria de poder ver quais filmes estão em cartaz."*
+- História 2: *"Eu, como usuária, gostaria de ver quais os preços do ingresso de cinemas da região."*
+- História 3: *"Eu, como usuário, gostaria de comprar o ingresso mais barato disponível no dia."*
+
+Com o objetivo de embasar os nossos perfis de usuários, fizemos uma pesquisa com usuários reais através de um google forms.
+
+### 2. Protótipo
+
+O segundo passo no desenvolvimento do app foi a montagem de um protótipo, para definir design de produto e experiência de usuário.
+
+- Página inicial:
+![Imgur](https://i.imgur.com/d8zAZWi.png?2)
+***
+- Página de filme:
+![Imgur](https://i.imgur.com/1EQlrSb.png?1)
+***
