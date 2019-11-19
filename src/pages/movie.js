@@ -68,7 +68,7 @@ function Movie(props) {
             document.querySelector('.theater').innerHTML +=
               `<div class="sale-card">
                 <div>
-                  <h2 class="cine">${item.key}</h2>
+                  <h3 class="cine">${item.key}</h3>
                   <p class="section"> ${item.horario}</p>
                 </div>
                 <div class="price-btn">
