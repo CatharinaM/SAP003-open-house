@@ -274,7 +274,7 @@ p#movie-title.movie-data {
     font-family: Helvetica;
     font-style: normal;
     font-weight: bold;
-    margin-right: 10px;
+    margin-right: 20px;
     font-size: 1.2rem;
     line-height: 23px;
     text-align: right;
@@ -282,11 +282,8 @@ p#movie-title.movie-data {
     color: #FFFFFF;
     margin-bottom: 0;
 }
-
-button.voltar {
-    border-radius: 5px;
-    margin: 6px;
-    display: flex;
+.theater{
+  margin-top: 10px;
 }
 
 
