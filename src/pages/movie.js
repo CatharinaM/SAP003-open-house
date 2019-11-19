@@ -28,23 +28,24 @@ function Movie(props) {
                   let dado = item.data()[key]
                   let horario = hora.data()[today]
                   let url = hora.data().site
-                  price.push([key, dado, horario, url])
+                  price.push({key, dado, horario, url})
                 };                
               }         
             }
           })
         })
-        price.sort((a, b) => (a[2] > b[2]?1:-1))
+        console.log(price);
+        price.sort((a, b) => (a.horario > b.horario ? 1: -1))
         price.forEach(item => {
           document.querySelector('.theater').innerHTML +=
           `<div class="sale-card">
             <div>
-              <h2 class="cine">${item[0]}</h2>
-              <p class="section"> ${item[1]}</p>
+              <h2 class="cine">${item.key}</h2>
+              <p class="section"> ${item.dado}</p>
             </div>
             <div class="price-btn">
-              <p class="price">R$ ${item[2]}</p>
-              <a href="${item[3]}" target="_blank"><button class="sale-btn">COMPRAR</button></a>
+              <p class="price">${item.horario}</p>
+              <a href="${item.url}" target="_blank"><button class="sale-btn">COMPRAR</button></a>
             </div>
           </div>`
         })    
