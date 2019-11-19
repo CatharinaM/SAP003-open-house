@@ -1,4 +1,22 @@
-# Open House
+
+# Open House - Movietime
+## O projeto
+Neste projeto.... 
+
+## Características técnicas 
+
+
+## Planejamento
+ 
+
+ **HISTÓRIA DE USUÁRIO :**
+   
+
+## Desenvolvimento Front-end  
+
+
+
+# Open House - MovieTime
 
 ***
 ## Resumo do Projeto
@@ -53,4 +71,3 @@ Com base nesse problema, criamos as seguintes personas:
 
 *Necessidade*
 - Saber quais os ingressos mais baratos do dia.
-
