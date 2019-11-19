@@ -46,11 +46,7 @@ function Movie(props) {
                     let horario = item.data()[key];
                     let precoNoHorario = hora.data()[today];
                     let url = hora.data().site;
-                    price.push({
-                      key,
-                      horario,
-                      precoNoHorario,
-                      url,
+                    price.push(key, horario, precoNoHorario, url,
                     });
                   }
                 }

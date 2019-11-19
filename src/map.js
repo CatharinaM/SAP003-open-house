@@ -9,7 +9,7 @@ setTimeout(function(){
       document.getElementById('map'),
       defaultLayers.vector.normal.map,
       {
-        zoom: 15.5,
+        zoom: 15,
         center: { lat: -23.559447, lng: -46.658162 }
       });
     
