@@ -99,11 +99,6 @@ button.voltar {
   align-self: center;
 }
 
-.movie-data{
-  /* font-size: 1rem; */
-  /* text-align: justify; */
-}
-
 .movie-data>p{
   font-family: Raleway;
   font-style: normal;
