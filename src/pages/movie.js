@@ -42,12 +42,11 @@ function Movie(props) {
               if (item.id === movieData.original_title) {
                 for (let key in item.data()) {
                   if (key === hora.id) {
-                    console.log(item.data());
+                    // console.log(item.data());
                     let horario = item.data()[key];
                     let precoNoHorario = hora.data()[today];
                     let url = hora.data().site;
-                    price.push(key, horario, precoNoHorario, url,
-                    });
+                    price.push({key, horario, precoNoHorario, url});                    
                   }
                 }
               }
@@ -58,6 +57,8 @@ function Movie(props) {
           // daysWeek.addEventListener('change', function (e) {
           //   console.log(e.target.value);
           // });
+          console.log(price);
+          
           price.sort((a, b) => (a.precoNoHorario > b.precoNoHorario ? 1 : -1));
           price.forEach(item => {
             document.querySelector('.theater').innerHTML +=
