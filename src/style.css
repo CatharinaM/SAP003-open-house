@@ -46,7 +46,7 @@ main{
   justify-content: space-around;
 }
 
-header {
+.nav-bar {
   position: fixed;
   width: 100%;
   height: 52px;
@@ -172,3 +172,16 @@ button.voltar {
     margin: 6px;
     display: flex;
 }
+
+@media only screen and (min-width: 600px) {
+  .nav-bar {
+    height: 70px;
+  }
+  .movie{
+    justify-content: space-around;
+  }
+  .poster{
+    width: auto;
+
+  }
+} 
