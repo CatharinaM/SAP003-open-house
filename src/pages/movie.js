@@ -5,11 +5,11 @@ function movieRender(movieData) {
             <img src='https://image.tmdb.org/t/p/w200${movieData.poster_path}'>
             <div><p>${movieData.title}</p><p>${movieData.overview}</p></div>
             <div>
-            <select id="day">
-            <option value="1">Segunda-feira (25/11)<option>
-            <option value="2">Terça-feira (26/11)<option>
-            </select>
-            <button>Filtrar</button>
+             <select id="day">
+              <option value="1">Segunda-feira (25/11)<option>
+              <option value="2">Terça-feira (26/11)<option>
+             </select>
+             <button>Filtrar</button>
             </div>`;
 }
 
@@ -32,6 +32,7 @@ function Movie(props) {
     .then(response => response.json())
     .then(data => {
       let movieData = data.results[0];
+
       movieRender(movieData);
       firebase.firestore()
         .collection('cinema')
@@ -52,25 +53,28 @@ function Movie(props) {
               }
             });
           });
-          // const daysWeek = document.getElementById('day');
+          const daysWeek = document.getElementById('day');
 
-          // daysWeek.addEventListener('change', function (e) {
-          //   console.log(e.target.value);
-          // });
+
+          daysWeek.addEventListener('change', function () {
+            console.log(daysWeek.options[daysWeek.selectedIndex].value);
+        
+          });
+
           console.log(price);
           
           price.sort((a, b) => (a.precoNoHorario > b.precoNoHorario ? 1 : -1));
           price.forEach(item => {
             document.querySelector('.theater').innerHTML +=
               `<div class="sale-card">
-              <div>
-              <h2 class="cine">${item.key}</h2>
-              <p class="section"> ${item.horario}</p>
-              </div>
-              <div class="price-btn">
-              <p class="price">${item.precoNoHorario}</p>
-              <a href="${item.url}" target="_blank"><button class="sale-btn">COMPRAR</button></a>
-              </div>
+                <div>
+                  <h2 class="cine">${item.key}</h2>
+                  <p class="section"> ${item.horario}</p>
+                </div>
+                <div class="price-btn">
+                  <p class="price">${item.precoNoHorario}</p>
+                  <a href="${item.url}" target="_blank"><button class="sale-btn">COMPRAR</button></a>
+                </div>
               </div>`;
           });
         });
