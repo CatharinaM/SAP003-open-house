@@ -185,8 +185,13 @@ button.voltar {
   min-width: 50%;
   height: 240px;
   width: auto;
+  min-width: 53%;
+  height: auto;
   align-self: flex-start;
-  flex-grow: 3;
+  border-radius: 10px;
+  margin: 0 15px 0 0;
+  align-self: center;
+  
 }
 .movie-data>h2 {
   font-family: Raleway;
@@ -199,6 +204,7 @@ button.voltar {
   color: #FFFFFF;
 }
 
+
 .movie-data>p{
   font-family: Raleway;
   font-style: normal;
@@ -207,11 +213,33 @@ button.voltar {
   line-height: 16px;
   color: #FFFFFF;
   height: 232px;
+
+.movie-data{
+  font-size: 0.7em;
+  text-align: justify;
+}
+
+.movie-data>p{
+  max-height: 250px;
+  font-family: Raleway;
+  font-style: normal;
+  overflow: auto;
+}
+p#movie-title.movie-data {
+    margin-bottom: 5px;
+    font-size: x-large;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 19px;
+    line-height: 22px;
+
 }
 .movie-data>p{
   max-height: 250px;
   overflow: auto;
 }
+
 
 
 .sale-card {
@@ -293,27 +321,74 @@ button.voltar {
 
 
 @media only screen and (min-width: 600px) {
+
   main{
     margin-top: 15px;
+    width: 70%;
+    margin-left: 15%;
   }
 
   .nav-bar {
     height: 70px;
   }
 
-  .movie{
+    main{
+        margin-top: 15px;
+    }
+    .nav-bar {
+        height: 70px;
+    }
+    .movie-info {
+        justify-content: space-around;
+    }
+    .poster{
+        width: auto;
+    }
+    .movietime {
+        font-family: 'Raleway', sans-serif;
+        
+    }
+    
+    button.voltar {
+        display: none;
+    }
+    
+}
+
+.poster-img:hover{
+    filter: brightness(50%);
+}
+
+   /*.movie-info{
+    font-size: 1.4em;
+    display: flex;
+    flex-direction: row;
+  }  */
+
+  .movie-info{
+    margin-bottom: none;
+  }
+
+   .movie-image{
+    height: 22rem;
+    width: 16rem;
+  } 
+
+  .movie-data{
+    font-size: 1.2rem;
+    padding: 10px; 
+  } 
+
+  .theater{
+    display: flex;
+    flex-direction: column;
     justify-content: space-around;
   }
 
-  .poster{
-    width: auto;
-  }
+} 
+ 
 
-  .poster-img:hover{
-    filter: brightness(50%);
-  }
-
-  .carousel {
+ .carousel {
     margin-left: 15px;
     margin-right: 15px;
  }
