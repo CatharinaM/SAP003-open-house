@@ -14,7 +14,6 @@ function Movie(props) {
     .then(response => response.json())
     .then(data => {
       let movieData = data.results[0];
-      // console.log(movieData);
       firebase.firestore().collection('cinema').get().then((snap) => {
         snap.forEach(hora => {      
           document.querySelector('.movie-info').innerHTML = `

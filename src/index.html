@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,20 +8,50 @@
   <title>Movietime</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <header class="nav-bar">
     <a class="logo" href='#home'>
-      <img class="logo-img" src="images/logomaior.png" alt="MovieTime" ></a>
-    </header>
-    
+      <img class="logo-img" src="images/logomaior.png" alt="MovieTime"></a>
+  </header>
+  <div class="slide">
+    <div class="carousel">
+      <ul class="slides">
+        <input type="radio" name="radio-buttons" id="img-1" checked />
+        <li class="slide-container">
+          <div class="slide-image">
+            <img src="images/bacurau.jpg">
+          </div>
+        </li>
+        <input type="radio" name="radio-buttons" id="img-2" />
+        <li class="slide-container">
+          <div class="slide-image">
+            <img src="images/coringa.jpg">
+          </div>
+        </li>
+        <input type="radio" name="radio-buttons" id="img-3" />
+        <li class="slide-container">
+          <div class="slide-image">
+            <img src="images/fordv.jpg">
+          </div>
+        </li>
+        <div class="carousel-dots">
+          <label for="img-1" class="carousel-dot" id="img-dot-1"></label>
+          <label for="img-2" class="carousel-dot" id="img-dot-2"></label>
+          <label for="img-3" class="carousel-dot" id="img-dot-3"></label>
+        </div>
+      </ul>
+    </div>
+  </div>
   <main></main>
-  
+
   <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-firestore.js"></script> 
+  <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-firestore.js"></script>
   <script src="./firebaseconfig.js"></script>
   <script type="module" src="./main.js"></script>
-  <script type="module" src="./map.js"></script> 
+  <!-- <script type="module" src="./map.js"></script>  -->
   <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
   <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
 </body>
+
 </html>
