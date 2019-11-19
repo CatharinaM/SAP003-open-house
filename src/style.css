@@ -83,19 +83,34 @@ button.voltar {
   margin-bottom: 15px;
 }
 .movie-info>img{
-  min-width: 50%;
+  min-width: 53%;
   height: auto;
   /* max-height: 100%; */
   align-self: flex-start;
   flex-grow: 3;
+  border-radius: 10px;
+  margin: 0 15px 0 0;
+  align-self: center;
+  
 }
 .movie-data{
   font-size: 0.7em;
+  text-align: justify;
 }
 .movie-data>p{
   max-height: 250px;
-
+  font-family: Raleway;
+  font-style: normal;
   overflow: auto;
+}
+p#movie-title.movie-data {
+    margin-bottom: 5px;
+    font-size: x-large;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 19px;
+    line-height: 22px;
 }
 
 .sale-card {
@@ -186,7 +201,7 @@ button.voltar {
   .nav-bar {
     height: 70px;
   }
-  .movie{
+  .movie-info {
     justify-content: space-around;
   }
   .poster{
@@ -197,22 +212,6 @@ button.voltar {
 
     }
 
-    .movie {
-        display: flex;
-        padding: 10px;
-    }
-
-    .movie-poster {
-        border-radius: 6px;
-        width: fit-content;
-        height: fit-content;
-    }
-
-    .movie-content {
-        padding: 15px;
-        text-align: justify;
-        
-    }
 
 }
   
