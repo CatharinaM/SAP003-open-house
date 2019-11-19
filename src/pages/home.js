@@ -5,7 +5,7 @@ function Home(props) {
     <h3>Filmes em cartaz essa semana</h3>
     <section class=movie></section>
     <p class="map-title">Cinemas próximos</p>
-  <div style="width: 640px; height: 480px;" id="map"></div>`
+  <div style="width: 100%; height: 480px;" id="map"></div>`
 
   props.forEach(item => {
     fetch (movieUrl + item.id)
