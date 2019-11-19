@@ -8,7 +8,8 @@ function Movie(props) {
   let template = `
   ${Button({id: 'voltar', title: 'voltar', class: 'voltar', onClick: backToHome})}
   <section class='movie-info'></section>
-    <section class='theater'></section>
+  <select class="filtro"></select>
+  <section class='theater'></section>
   `
   fetch(movieUrl + location.hash.substring(1))
     .then(response => response.json())
@@ -17,12 +18,34 @@ function Movie(props) {
       // console.log(movieData);
       firebase.firestore().collection('cinema').get().then((snap) => {
         snap.forEach(hora => {      
-          document.querySelector('.movie-info').innerHTML = `
-          <img src='https://image.tmdb.org/t/p/w200${movieData.poster_path}'>
-          <div class="movie-data"><h2>${movieData.title}</h2><p>${movieData.overview}</p></div>`
+          const time = new Date()
+          const amanha = time.setDate(time.getDate()+1)
+          console.log(time);
+          
+          console.log(amanha.toDate());
+          
+          // document.querySelector('.filtro').innerHTML = `
+          // <option value="${time.getDay()}">${time.toLocaleDateString('pt-BR')}</option>
+          // <option value="${amanha.getDay()}">${amanha.toLocaleDateString('pt-BR')}</option>
+          // `
+
+
+
           props.forEach(item => {
+            // console.log(item.data());
             
-            if (item.id === movieData.original_title){
+            
+            if (item.id === movieData.original_title){              
+              document.querySelector('.movie-info').innerHTML = `
+              <img src='https://image.tmdb.org/t/p/w200${movieData.poster_path}'>
+              
+              <div class="movie-data"><h2>${movieData.title}</h2>
+              <p>Diretor(a):${item.data().Cinemark}</p>
+              <p>Elenco:${item.data().Cinemark}</p>
+              <p>Duração:${item.data().Cinemark}</p>
+              <p>Classificação:${item.data().Cinemark}</p>
+
+              </div>`
               for (let key in item.data()){
                 if(key === hora.id){
                   let dado = item.data()[key]
