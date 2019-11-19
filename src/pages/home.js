@@ -6,7 +6,6 @@ function Home(props) {
     <section class=movie></section>
     <p class="map-title">Cinemas próximos</p>
   <div style="width: 100%; height: 480px;" id="map"></div>`
-
   props.forEach(item => {
     fetch (movieUrl + item.id)
     .then(response => response.json())

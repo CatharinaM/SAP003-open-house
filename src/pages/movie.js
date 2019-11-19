@@ -1,27 +1,22 @@
-import Button from '../components/button.js';
-
 function Movie(props) {
   const date = new Date()
   const today = date.getDay()
   let price = []
 
   let template = `
-  ${Button({id: 'voltar', title: 'voltar', class: 'voltar', onClick: backToHome})}
   <section class='movie-info'></section>
     <section class='theater'></section>
   `
   fetch(movieUrl + location.hash.substring(1))
     .then(response => response.json())
-    .then(data => {
+    .then(data => { console.log(data);
       let movieData = data.results[0];
-      // console.log(movieData);
       firebase.firestore().collection('cinema').get().then((snap) => {
         snap.forEach(hora => {      
           document.querySelector('.movie-info').innerHTML = `
-          <img src='https://image.tmdb.org/t/p/w200${movieData.poster_path}'>
+          <img class="movie-img" src='https://image.tmdb.org/t/p/w200${movieData.poster_path}'>
           <div class="movie-data"><h2>${movieData.title}</h2><p>${movieData.overview}</p></div>`
           props.forEach(item => {
-            
             if (item.id === movieData.original_title){
               for (let key in item.data()){
                 if(key === hora.id){
@@ -51,10 +46,6 @@ function Movie(props) {
       })
     })
   return template
-}
-
-function backToHome () {
-  window.location.hash = '#home'
 }
 
 export default Movie;

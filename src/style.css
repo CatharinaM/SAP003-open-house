@@ -3,12 +3,10 @@
 *{
   margin: 0px;
   box-sizing: border-box;
-  color: beige;
 }
 
 body {
   background-image: linear-gradient(#2F1551, #160032);
-  background-attachment: fixed;
   padding: 50px 20px;
 }
 
@@ -43,7 +41,10 @@ main{
 
 .list{
   display: flex;
-  justify-content: space-around;
+}
+
+.nav-bar {
+  display: flex;
 }
 
 header {
@@ -73,24 +74,40 @@ button.voltar {
 .movie-info{
   display: flex;
   justify-content: space-around;
-  /* max-height: 250px; */
   margin-bottom: 15px;
 }
 .movie-info>img{
   min-width: 50%;
-  height: auto;
-  /* max-height: 100%; */
+  height: 240px;
+  width: auto;
   align-self: flex-start;
   flex-grow: 3;
 }
-.movie-data{
-  font-size: 0.7em;
+.movie-data>h2 {
+  font-family: Raleway;
+  margin-left: 3%;
+  margin-top: 2%;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 22px;
+  color: #FFFFFF;
+}
+
+.movie-data>p{
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  color: #FFFFFF;
+  height: 232px;
 }
 .movie-data>p{
   max-height: 250px;
-
   overflow: auto;
 }
+
 
 .sale-card {
     margin-bottom: 8px;
@@ -135,23 +152,19 @@ button.voltar {
     font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-weight: normal;
-    /* font-size: 24px; */
     line-height: 19px;
     color: #FFC700;
-    /* margin-top: 3%; */
-    /* margin-left: 2%; */
+
 }
 
 .section {
     font-family: Helvetica;
     font-style: normal;
     font-weight: normal;
-    /* font-size: 16px; */
     line-height: 14px;
     color: #854CD1;
     padding: 10px;
-    /* margin-top: 3%;
-    margin-left: 2%; */
+
 }
 
 .price {
@@ -167,8 +180,3 @@ button.voltar {
     color: #FFFFFF;
 }
 
-button.voltar {
-    border-radius: 5px;
-    margin: 6px;
-    display: flex;
-}
