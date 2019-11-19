@@ -32,6 +32,7 @@ function Movie(props) {
     .then(response => response.json())
     .then(data => {
       let movieData = data.results[0];
+
       movieRender(movieData);
       firebase.firestore()
         .collection('cinema')
@@ -53,6 +54,7 @@ function Movie(props) {
             });
           });
           // const daysWeek = document.getElementById('day');
+
 
           // daysWeek.addEventListener('change', function (e) {
           //   console.log(e.target.value);
