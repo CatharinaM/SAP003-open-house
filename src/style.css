@@ -194,28 +194,32 @@ button.voltar {
     display: flex;
 }
 
+
 @media only screen and (min-width: 600px) {
-  main{
-    margin-top: 15px;
-  }
-  .nav-bar {
-    height: 70px;
-  }
-  .movie-info {
-    justify-content: space-around;
-  }
-  .poster{
-    width: auto;
-  }
+    main{
+        margin-top: 15px;
+    }
+    .nav-bar {
+        height: 70px;
+    }
+    .movie-info {
+        justify-content: space-around;
+    }
+    .poster{
+        width: auto;
+    }
     .movietime {
         font-family: 'Raleway', sans-serif;
-
+        
     }
-
-
+    
+    button.voltar {
+        display: none;
+    }
+    
 }
-  
-  .poster-img:hover{
+
+.poster-img:hover{
     filter: brightness(50%);
-  }
- 
+}
+
