@@ -18,7 +18,7 @@ function Movie(props) {
       firebase.firestore().collection('cinema').get().then((snap) => {
         snap.forEach(hora => {      
           document.querySelector('.movie-info').innerHTML = `
-          <img src='https://image.tmdb.org/t/p/w200${movieData.poster_path}'>
+          <div><img class="movie-image" src='https://image.tmdb.org/t/p/w200${movieData.poster_path}'></div>
           <div class="movie-data"><h2>${movieData.title}</h2><p>${movieData.overview}</p></div>`
           props.forEach(item => {
             

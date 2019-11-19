@@ -46,7 +46,7 @@ main{
   justify-content: space-around;
 }
 
-header {
+.nav-bar {
   position: fixed;
   width: 100%;
   height: 52px;
@@ -58,7 +58,13 @@ header {
   align-items: center;
   justify-content: center;
 }
+.logo{
+  height: 70%;
+}
 
+.logo-img{
+  max-height: 100%;
+}
 #map{
   width: 100%;
 }
@@ -174,3 +180,50 @@ button.voltar {
 }
 
 
+@media only screen and (min-width: 600px) {
+  main{
+    margin-top: 15px;
+    width: 70%;
+    margin-left: 15%;
+  }
+  .nav-bar {
+    height: 70px;
+  }
+  .movie{
+    justify-content: space-around;
+  }
+  .poster{
+    width: auto;
+
+  }
+  .poster-img:hover{
+    filter: brightness(50%);
+  }
+
+   /*.movie-info{
+    font-size: 1.4em;
+    display: flex;
+    flex-direction: row;
+  }  */
+
+  .movie-info{
+    margin-bottom: none;
+  }
+
+   .movie-image{
+    height: 22rem;
+    width: 16rem;
+  } 
+
+  .movie-data{
+    font-size: 1.2rem;
+    padding: 10px; 
+  } 
+
+  .theater{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+} 
