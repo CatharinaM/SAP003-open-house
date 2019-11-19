@@ -1,12 +1,44 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 
 *{
-    margin: 0px;
-    display: block;
+  margin: 0px;
+  box-sizing: border-box;
+  color: beige;
+}
+
+body {
+  background-image: linear-gradient(#2F1551, #160032);
+  background-attachment: fixed;
+  padding: 50px 20px;
 }
 
 .movietime {
-    font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', sans-serif;
+}
+
+main{
+  padding: 10px;
+}
+
+.movie{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.poster{
+  width: 50%;
+  text-align: center;
+  padding: 10px;
+}
+
+.poster>a{
+  text-decoration: none;
+}
+
+.poster-img{
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
 }
 
 .list{
@@ -14,45 +46,152 @@
   justify-content: space-around;
 }
 
-header {
-    position: fixed;
-    width: 100%;
-    height: 52px;
-    left: -1px;
-    top: 0px;
-    background: #181423;
-    opacity: 0.8;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.nav-bar {
+  position: fixed;
+  width: 100%;
+  height: 52px;
+  left: -1px;
+  top: 0px;
+  background: #181423;
+  opacity: 0.8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo{
+  height: 70%;
+}
+
+.logo-img{
+  max-height: 100%;
+}
+#map{
+  width: 100%;
 }
 
 button.voltar {
-    display: none;
+  background: rgb(199, 165, 255);
+  background-image: url(./images/like.svg);
+  background-size: 18px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.movie-info{
+  display: flex;
+  justify-content: space-around;
+  /* max-height: 250px; */
+  margin-bottom: 15px;
+}
+.movie-info>img{
+  min-width: 50%;
+  height: auto;
+  /* max-height: 100%; */
+  align-self: flex-start;
+  flex-grow: 3;
+}
+.movie-data{
+  font-size: 0.7em;
+}
+.movie-data>p{
+  max-height: 250px;
+
+  overflow: auto;
 }
 
-@media (max-width: 700px) {
+.sale-card {
+    margin-bottom: 8px;
+    font-size: 0.8em;
+    height: 118px;
+    background: #2F1452;
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.16);
+    border-radius: 5px;
+    padding: 10px;
+}
 
-    * {
-        margin: 0px;
-        display: block;
-    }
+.price-btn {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 10px;
+    align-items: center;
+}
 
-    body {
-        background-image: linear-gradient(#2F1551, #160032);
-        background-attachment: fixed;
-        padding: 50px 20px;
-        
+.sale-btn {
+    display:inline-block;
+    background: #01C467;
+    height: 36px;
+    width: 118px;
+    margin-bottom: 3%;
+    border: none;
+    box-shadow: 0px 3px 0px #00532B;
+    border-radius: 2px;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    /* font-size: 16px; */
+    line-height: 19px;
+    color: #FFFFFF;
+}
 
-    }
+.sale-btn:focus {
+    outline: none;
+}
 
+.cine {
+    font-family: Raleway;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    /* font-size: 24px; */
+    line-height: 19px;
+    color: #FFC700;
+    /* margin-top: 3%; */
+    /* margin-left: 2%; */
+}
 
-    button.voltar {
-       border-radius: 5px;
-       margin: 6px;
-       display: flex;
+.section {
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: normal;
+    /* font-size: 16px; */
+    line-height: 14px;
+    color: #854CD1;
+    padding: 10px;
+    /* margin-top: 3%;
+    margin-left: 2%; */
+}
+
+.price {
+    display: inline-block;
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 1.2em;
+    line-height: 23px;
+    text-align: right;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+
+button.voltar {
+    border-radius: 5px;
+    margin: 6px;
+    display: flex;
+}
+
+@media only screen and (min-width: 600px) {
+  main{
+    margin-top: 15px;
   }
-
+  .nav-bar {
+    height: 70px;
+  }
+  .movie{
+    justify-content: space-around;
+  }
+  .poster{
+    width: auto;
+  }
     .movietime {
         font-family: 'Raleway', sans-serif;
 
@@ -76,3 +215,8 @@ button.voltar {
     }
 
 }
+  
+  .poster-img:hover{
+    filter: brightness(50%);
+  }
+ 

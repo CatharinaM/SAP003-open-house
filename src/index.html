@@ -4,25 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title class="movietime">Movietime</title>
+  <title>Movietime</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="nav-bar">
-    <a href='#home'>
-      <img class="logo" src="Group 16logo.png" alt="MovieTime" ></a>
+    <a class="logo" href='#home'>
+      <img class="logo-img" src="images/logomaior.png" alt="MovieTime" ></a>
     </header>
     
   <main></main>
-
-  <p class="map-title">Cinemas próximos</p>
-  <div style="width: 640px; height: 480px;" id="map"></div>
   
   <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-firestore.js"></script> 
   <script src="./firebaseconfig.js"></script>
   <script type="module" src="./main.js"></script>
-  <script type="module" src="./map.js"></script>
+  <script type="module" src="./map.js"></script> 
   <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
   <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
 </body>
