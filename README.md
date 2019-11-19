@@ -23,9 +23,7 @@ Neste projeto....
 
 ### 1. Definição de Produto
 
-Como proposta, o projeto open house nos desafiou a desenvolver uma aplicação web a partir do tema entretenimento. Para tal, seguimos alguns passos no período de uma semana. Estes serão mais bem detalhados nos tópicos a seguir.
-
-#### 1.1. Dia 1: Investigação
+Como proposta, o projeto open house nos desafiou a desenvolver uma aplicação web a partir do tema entretenimento. Para tal, seguimos alguns passos no período de uma semana.
 
 Antes de iniciar o desenvolvimento do app, fizemos um trabalho de investigação de usuários, quais seus possíveis problemas e a criação de personas a partir disso.
 
@@ -71,3 +69,4 @@ Com base nesse problema, criamos as seguintes personas:
 
 *Necessidade*
 - Saber quais os ingressos mais baratos do dia.
+
