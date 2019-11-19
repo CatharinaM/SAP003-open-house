@@ -31,7 +31,7 @@ function Home(props) {
     </ul>
   </div>
 </div>
-    <h3>Filmes em cartaz essa semana</h3>
+    <h3 class="week-movies">Filmes em cartaz essa semana</h3>
     <section class=movie></section>
     <p class="map-title">Cinemas próximos</p>
   <div id="map"></div>`
