@@ -5,6 +5,7 @@ function Movie(props) {
   const today = date.getDay()
   let price = []
   let template = `
+    ${Button({id: 'voltar', title: "voltar", class: 'voltar', onClick: backToHome})}
     <section class='movie'></section>
     <section class='theater'></section>
   `
@@ -16,9 +17,8 @@ function Movie(props) {
       firebase.firestore().collection('cinema').get().then((snap) => {
         snap.forEach(hora => {      
           document.querySelector('.movie').innerHTML = `
-          ${Button({id: 'voltar', title: "voltar", class: 'voltar', onClick: backToHome})}
-          <img src='https://image.tmdb.org/t/p/w200${movieData.poster_path}'>
-          <div><p>${movieData.title}</p><p>${movieData.overview}</p></div>`
+          <img class = "movie-poster" src='https://image.tmdb.org/t/p/w200${movieData.poster_path}'>
+          <div class = "movie-content"><p id = "movie-title" class = "movie-data">${movieData.title}</p><p class = "movie-data">${movieData.overview}</p></div>`
           props.forEach(item => {
             if (item.id === movieData.original_title){
               for (let key in item.data()){

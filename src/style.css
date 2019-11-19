@@ -57,3 +57,22 @@ button.voltar {
         font-family: 'Raleway', sans-serif;
 
     }
+
+    .movie {
+        display: flex;
+        padding: 10px;
+    }
+
+    .movie-poster {
+        border-radius: 6px;
+        width: fit-content;
+        height: fit-content;
+    }
+
+    .movie-content {
+        padding: 15px;
+        text-align: justify;
+        
+    }
+
+}
