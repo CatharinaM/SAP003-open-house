@@ -12,6 +12,9 @@ function Home(props) {
       <div class="carousel-item">
         <img class="d-block w-100" src="images/ford.jpg" alt="Terceiro Slide">
       </div>
+      <div class="carousel-item">
+      <img class="d-block w-100" src="images/panteras.jpg" alt="Quarto Slide">
+    </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -31,15 +34,6 @@ function Home(props) {
     var platform = new H.service.Platform({
       'apikey': '4suKp7ALVGG_DeM2J0bKH5XgCuWGWOozj4Cw3z0rk_8'
     });
-
-    ui.getControl('zoom').setEnabled(false)
-    var mapSettings = ui.getControl('mapsettings');
-    var zoom = ui.getControl('zoom');
-    var scalebar = ui.getControl('scalebar');
-
-    mapSettings.setAlignment('top-left');
-    zoom.setAlignment('top-left');
-    scalebar.setAlignment('top-left');
 
     var defaultLayers = platform.createDefaultLayers();
 
