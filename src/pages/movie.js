@@ -16,12 +16,19 @@ function Movie(props) {
       let movieData = data.results[0];
       firebase.firestore().collection('cinema').get().then((snap) => {
         snap.forEach(hora => {      
-          document.querySelector('.movie-info').innerHTML = `
-          <img src='https://image.tmdb.org/t/p/w200${movieData.poster_path}'>
-          <div class="movie-data"><h2>${movieData.title}</h2><p>${movieData.overview}</p></div>`
           props.forEach(item => {
             
             if (item.id === movieData.original_title){
+              document.querySelector('.movie-info').innerHTML = `
+              <img src='https://image.tmdb.org/t/p/w200${movieData.poster_path}'>
+              
+              <div class="movie-data"><h2>${movieData.title}</h2>
+              <p>Diretor(a): ${item.data().diretor}</p>
+              <p>Elenco: ${item.data().elenco}</p>
+              <p>Duração: ${item.data().duracao}</p>
+              <p>Classificação: ${item.data().classificacao}</p>
+
+              </div>`
               for (let key in item.data()){
                 if(key === hora.id){
                   let dado = item.data()[key]
