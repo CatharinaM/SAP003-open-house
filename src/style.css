@@ -46,7 +46,7 @@ main{
   justify-content: space-around;
 }
 
-header {
+.nav-bar {
   position: fixed;
   width: 100%;
   height: 52px;
@@ -58,7 +58,13 @@ header {
   align-items: center;
   justify-content: center;
 }
+.logo{
+  height: 70%;
+}
 
+.logo-img{
+  max-height: 100%;
+}
 #map{
   width: 100%;
 }
@@ -70,20 +76,42 @@ button.voltar {
   background-position: center;
   background-repeat: no-repeat;
 }
+.movie-info{
+  display: flex;
+  justify-content: space-around;
+  /* max-height: 250px; */
+  margin-bottom: 15px;
+}
+.movie-info>img{
+  min-width: 50%;
+  height: auto;
+  /* max-height: 100%; */
+  align-self: flex-start;
+  flex-grow: 3;
+}
+.movie-data{
+  font-size: 0.7em;
+}
+.movie-data>p{
+  max-height: 250px;
+
+  overflow: auto;
+}
 
 .sale-card {
     margin-bottom: 8px;
+    font-size: 0.8em;
     height: 118px;
     background: #2F1452;
     box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.16);
     border-radius: 5px;
-    padding: 1%;
+    padding: 10px;
 }
 
 .price-btn {
     display: flex;
     justify-content: flex-end;
-    padding: 10px;
+    padding: 0 10px;
     align-items: center;
 }
 
@@ -99,7 +127,7 @@ button.voltar {
     font-family: Raleway;
     font-style: normal;
     font-weight: bold;
-    font-size: 16px;
+    /* font-size: 16px; */
     line-height: 19px;
     color: #FFFFFF;
 }
@@ -113,22 +141,23 @@ button.voltar {
     font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 24px;
+    /* font-size: 24px; */
     line-height: 19px;
     color: #FFC700;
-    margin-top: 3%;
-    margin-left: 2%;
+    /* margin-top: 3%; */
+    /* margin-left: 2%; */
 }
 
 .section {
     font-family: Helvetica;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
+    /* font-size: 16px; */
     line-height: 14px;
     color: #854CD1;
-    margin-top: 3%;
-    margin-left: 2%;
+    padding: 10px;
+    /* margin-top: 3%;
+    margin-left: 2%; */
 }
 
 .price {
@@ -149,3 +178,22 @@ button.voltar {
     margin: 6px;
     display: flex;
 }
+
+@media only screen and (min-width: 600px) {
+  main{
+    margin-top: 15px;
+  }
+  .nav-bar {
+    height: 70px;
+  }
+  .movie{
+    justify-content: space-around;
+  }
+  .poster{
+    width: auto;
+
+  }
+  .poster-img:hover{
+    filter: brightness(50%);
+  }
+} 

@@ -7,20 +7,21 @@ function Movie(props) {
 
   let template = `
   ${Button({id: 'voltar', title: 'voltar', class: 'voltar', onClick: backToHome})}
-  <section class='movie'></section>
+  <section class='movie-info'></section>
     <section class='theater'></section>
   `
-  console.log(location.hash);
   fetch(movieUrl + location.hash.substring(1))
     .then(response => response.json())
     .then(data => {
       let movieData = data.results[0];
+      // console.log(movieData);
       firebase.firestore().collection('cinema').get().then((snap) => {
         snap.forEach(hora => {      
-          document.querySelector('.movie').innerHTML = `
+          document.querySelector('.movie-info').innerHTML = `
           <img src='https://image.tmdb.org/t/p/w200${movieData.poster_path}'>
-          <div><p>${movieData.title}</p><p>${movieData.overview}</p></div>`
+          <div class="movie-data"><h2>${movieData.title}</h2><p>${movieData.overview}</p></div>`
           props.forEach(item => {
+            
             if (item.id === movieData.original_title){
               for (let key in item.data()){
                 if(key === hora.id){
