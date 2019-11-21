@@ -1,4 +1,3 @@
-
 # Open House - Movietime
 ## O projeto
 Neste projeto.... 
@@ -13,6 +12,8 @@ Neste projeto....
    
 
 ## Desenvolvimento Front-end  
+<<<<<<< HEAD
+=======
 
 
 
@@ -70,6 +71,9 @@ Com base nesse problema, criamos as seguintes personas:
 *Necessidade*
 - Saber quais os ingressos mais baratos do dia.
 
+<<<<<<< HEAD
+>>>>>>> master
+=======
 As três personas criadas nos levaram a três histórias de usuário:
 
 - História 1: *"Eu, como usuária, gostaria de poder ver quais filmes estão em cartaz."*
@@ -88,3 +92,4 @@ O segundo passo no desenvolvimento do app foi a montagem de um protótipo, para 
 - Página de filme:
 ![Imgur](https://i.imgur.com/1EQlrSb.png?1)
 ***
+>>>>>>> master
