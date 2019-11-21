@@ -7,6 +7,7 @@ function movieRender(movieData, movie) {
     <p>Elenco: ${movie.elenco}</p>
     <p>Duração: ${movie.duracao}</p>
     <p>Classificação: ${movie.classificacao}</p>
+    <!-- <p>Sinopse: ${movieData.overview}</p>-->
   </div>`;
 }
 
@@ -65,6 +66,7 @@ function fetchMovieData(props){
 function Movie(props) {  
   const template = `
     <section class='movie-info' style="margin-top: 27px;"></section>
+    <div>Obs: Taxas de serviço poderão ser aplicadas.</div>
     <section class='theater' style="margin-top: 27px;"></section>`;
 
   fetchMovieData(props)

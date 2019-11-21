@@ -238,11 +238,11 @@ p#movie-title.movie-data {
   }
 
   .d-block {
-    height: 28rem;
+    /* height: 28rem; */
   }
 
   .poster{
-    width: auto;
+    width: 33%;
   }
   .movietime {
     font-family: 'Raleway', sans-serif;   
@@ -258,11 +258,11 @@ p#movie-title.movie-data {
   .poster-img:hover{
     filter: brightness(50%);
   }
-
+/* 
   .poster-img {
     border-radius: 10px;
     width: 25rem
-  }
+  } */
 
   .movie-image{
     max-height: 100%;
