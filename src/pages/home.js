@@ -12,6 +12,9 @@ function Home(props) {
       <div class="carousel-item">
         <img class="d-block w-100" src="images/ford.jpg" alt="Terceiro Slide">
       </div>
+      <div class="carousel-item">
+      <img class="d-block w-100" src="images/panteras.jpg" alt="Quarto Slide">
+    </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -22,9 +25,9 @@ function Home(props) {
       <span class="sr-only">Próximo</span>
     </a>
   </div>
-    <h3 class="title-movies">Filmes em cartaz essa semana</h3>
+    <h3 class="title-movies">Filmes em cartaz</h3>
     <section class=movie></section>
-    <p class="map-title">Cinemas próximos</p>
+    <p class="map-title" style="padding-left: 4%;">Cinemas próximos</p>
   <div id="map"></div>`
 
   setTimeout(function () {
@@ -80,7 +83,7 @@ function Home(props) {
       .then(data => {
         let movieName = data.results[0].title
         let moviePoster = data.results[0].poster_path
-        document.querySelector('.movie').innerHTML += `<div class="poster"><a href='#${data.results[0].original_title}'><img class="poster-img" src='https://image.tmdb.org/t/p/w200${moviePoster}'><p>${movieName}</p></a></div>`
+        document.querySelector('.movie').innerHTML += `<div class="poster"><a href='#${data.results[0].original_title}'><img class="poster-img" src='https://image.tmdb.org/t/p/w342${moviePoster}'><p class="name-movie">${movieName}</p></a></div>`
       })
   })
   return template

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 
 *{
-  margin: 0px;
+  margin: 0;
   box-sizing: border-box;
   color: beige;
   font-family: 'Raleway', sans-serif;
@@ -10,51 +10,50 @@
 body {
   background-image: linear-gradient(#2F1551, #160032);
   background-attachment: fixed;
-  padding: 50px 20px;
-}
-
-main{
-  padding: 10px;
+  padding-top: 50px;
 }
 
 .title-movies {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  font-size: 2.5rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  font-size: 20px;
 }
 
-input:checked + .slide-container .nav label { display: block; }
+input:checked + .slide-container .nav label { 
+  display: block; 
+}
 
 #map {
     width: 640px; 
     height: 480px;
  }
 
-.movie{
+.movie {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
 
-.poster{
+.poster {
   width: 50%;
   text-align: center;
   padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.poster>a{
+.poster>a {
   text-decoration: none;
 }
 
-.poster-img{
+.poster-img {
   border-radius: 10px;
   max-width: 100%;
   height: auto;
 }
 
-.list{
+.list {
   display: flex;
   justify-content: space-around;
 }
@@ -72,7 +71,7 @@ input:checked + .slide-container .nav label { display: block; }
   justify-content: center;
 }
 
-.logo{
+.logo {
   height: 70%;
 }
 
@@ -95,23 +94,18 @@ button.voltar {
 .movie-info{
   display: flex;
   justify-content: space-around;
-  /* max-height: 250px; */
   margin-bottom: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .movie-image{
-  max-width: 50%;
-  height: auto;
-  /* max-height: 100%; */
-  align-self: flex-start;
   border-radius: 10px;
   margin: 0 15px 0 0;
   align-self: center;
-}
+  width: 80%;
+  height: 80;
 
-.movie-data{
-  /* font-size: 1rem; */
-  /* text-align: justify; */
 }
 
 .movie-data>p{
@@ -146,6 +140,7 @@ p#movie-title.movie-data {
     justify-content: flex-end;
     padding: 0 10px;
     align-items: center;
+    margin-top: 20px;
 }
 
 .sale-btn {
@@ -160,7 +155,6 @@ p#movie-title.movie-data {
     font-family: Raleway;
     font-style: normal;
     font-weight: bold;
-    /* font-size: 16px; */
     line-height: 19px;
     color: #FFFFFF;
 }
@@ -174,7 +168,6 @@ p#movie-title.movie-data {
     font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-weight: normal;
-    /* font-size: 24px; */
     line-height: 19px;
     color: #FFC700;
 }
@@ -203,8 +196,16 @@ p#movie-title.movie-data {
     margin-bottom: 0;
 }
 .theater{
-  margin-top: 10px;
+  margin: 10px;
 }
+
+
+
+
+
+
+
+
 
 
 @media only screen and (min-width: 600px) {
@@ -215,10 +216,31 @@ p#movie-title.movie-data {
     width: 80%;
   }
 
+  .movie-image{
+    max-width: 50%;
+    height: auto;
+    align-self: flex-start;
+    border-radius: 10px;
+    margin: 0 15px 0 0;
+    align-self: center;
+  }
+
   .nav-bar {
     height: 70px;
   }
   
+.title-movies {
+  font-size: 2.5rem;
+}
+
+  .carousel-inner {
+
+  }
+
+  .d-block {
+    height: 28rem;
+  }
+
   .poster{
     width: auto;
   }
@@ -227,17 +249,25 @@ p#movie-title.movie-data {
   }
   
   .movie-info {
-    justify-content: space-around;
-    height: 200px;
+    display: flex;
+    justify-content: flex-start;
+    height: 37rem
+    width: 50rem;
+    margin-top: 50px;
   }
   .poster-img:hover{
     filter: brightness(50%);
   }
 
+  .poster-img {
+    border-radius: 10px;
+    width: 25rem
+  }
+
   .movie-image{
     max-height: 100%;
     height: auto;
-    /* width: auto; */
+    width: 13rem;
   } 
 
   .movie-data{
@@ -249,6 +279,23 @@ p#movie-title.movie-data {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    padding-top: 20px;
+  }
+
+  .map-title {
+    padding-left: 4%;
+    font-size: 2rem;
+  }
+
+  .title-movies {
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+    padding-left: 3rem;
+    font-size: 2rem;
+  }
+
+  .name-movie {
+    font-size: 1.8rem;
   }
 
 }

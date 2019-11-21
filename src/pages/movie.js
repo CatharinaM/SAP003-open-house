@@ -64,15 +64,8 @@ function fetchMovieData(props){
 
 function Movie(props) {  
   const template = `
-    <section class='movie-info'></section>
-    <div>
-      <select id="day">
-      <option value="1">Segunda-feira (25/11)<option>
-      <option value="2">Terça-feira (26/11)<option>
-      </select>
-      <button>Filtrar</button>
-    </div>
-    <section class='theater'></section>`;
+    <section class='movie-info' style="margin-top: 27px;"></section>
+    <section class='theater' style="margin-top: 27px;"></section>`;
 
   fetchMovieData(props)
 
