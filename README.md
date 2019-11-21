@@ -1,22 +1,3 @@
-# Open House - Movietime
-## O projeto
-Neste projeto.... 
-
-## Características técnicas 
-
-
-## Planejamento
- 
-
- **HISTÓRIA DE USUÁRIO :**
-   
-
-## Desenvolvimento Front-end  
-<<<<<<< HEAD
-=======
-
-
-
 # Open House - MovieTime
 
 ***
@@ -71,9 +52,6 @@ Com base nesse problema, criamos as seguintes personas:
 *Necessidade*
 - Saber quais os ingressos mais baratos do dia.
 
-<<<<<<< HEAD
->>>>>>> master
-=======
 As três personas criadas nos levaram a três histórias de usuário:
 
 - História 1: *"Eu, como usuária, gostaria de poder ver quais filmes estão em cartaz."*
@@ -86,10 +64,16 @@ Com o objetivo de embasar os nossos perfis de usuários, fizemos uma pesquisa co
 
 O segundo passo no desenvolvimento do app foi a montagem de um protótipo, para definir design de produto e experiência de usuário.
 
+- Protótipo em papel:
+![prototipo](src/images/prototipo1.jpeg)
+
+- Protótipo feito no programa Figma:
+![prototipo](src/images/prototipo2.jpeg)
 - Página inicial:
+
 ![Imgur](https://i.imgur.com/d8zAZWi.png?2)
-***
+
 - Página de filme:
+
 ![Imgur](https://i.imgur.com/1EQlrSb.png?1)
 ***
->>>>>>> master
